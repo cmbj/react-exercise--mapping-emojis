@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import Entry from "./Entry";
+import emojipedia from "./emojipedia";
 
-function App() {
+function createEntry(entry) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Entry
+      key={entry.id}
+      emoji={entry.emoji}
+      title={entry.name}
+      description={entry.meaning}
+    />
+  );
+}
+
+export default function App() {
+  return (
+    <div>
+      <h1>
+        <span>emojipedia</span>
+      </h1>
+
+      {emojipedia.map(createEntry)}
     </div>
   );
 }
 
-export default App;
+// Lav Entry component for hvert "opslag"
+// Emoji, titel, beskrivelse
+// Hent data fra emojipedia fil

@@ -18,8 +18,9 @@ export default function App() {
       <h1>
         <span>emojipedia</span>
       </h1>
-
-      {emojipedia.map(createEntry)}
+      <div>
+        <dl className="dictionary">{emojipedia.map(createEntry)} </dl>
+      </div>
     </div>
   );
 }

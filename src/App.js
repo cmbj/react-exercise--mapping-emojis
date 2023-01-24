@@ -24,5 +24,3 @@ export default function App() {
     </div>
   );
 }
-
-// Centrér items i mobil version

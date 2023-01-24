@@ -25,6 +25,4 @@ export default function App() {
   );
 }
 
-// Lav Entry component for hvert "opslag"
-// Emoji, titel, beskrivelse
-// Hent data fra emojipedia fil
+// Centrér items i mobil version
